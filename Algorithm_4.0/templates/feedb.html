@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="result"></div>
+
+<script>
+var feedback=prompt("Enter Feedback");
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "Feedback");
+    // Retrieve
+    document.getElementById("result").innerHTML = localStorage.getItem("Feedback");
+} else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+alert("Feedback :"+feedback);
+</script>
+
+<!-- <input type="submit" name="Back" href="#"> -->
+<a href="file:///home/codept/arbaz/templates/main.html">Go Home</a>
+
+</body>
+</html>
